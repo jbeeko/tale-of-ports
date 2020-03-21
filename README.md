@@ -1,3 +1,16 @@
+# A Tale of Ports
+
+Like all good technical tales it started with tweet.  
+
+![Domain only tweet.](./images/domain-only.png "")
+
+That got me thinking, what about taking a "out of the box" Visual Studio Code C# HTTP Triggered functions project and porting it to F#. The idea is to do a few ports, one a naïve line bye line translation of the C# into F#. This is almost always very straight forward and the resulting F# tends to look like the C# with less ceremony. Other ports will explore if more idiomatic versions are an improvement. 
+
+## The C# Version
+
+To create the C# version I a recent version Visual Studio 2019 with .net Core 3.x installed. I simply  used the menu items to create a new HTTP Triggered Azure Functions Project. See xxxx for the repository. Except for a few changes to the naming this is what I got:
+
+```
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -33,3 +46,7 @@ namespace TaleOfPorts
         }
     }
 }
+
+```
+
+Fairly straight forward, 
