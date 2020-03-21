@@ -1,0 +1,21 @@
+@implementation = FSIdiomatic1
+
+
+### No name
+GET http://localhost:7071/api/{{implementation}}
+
+
+### With name in query
+GET http://localhost:7071/api/{{implementation}}/?name=joerg
+
+### With no name in json post body
+POST http://localhost:7071/api/{{implementation}}/
+
+{"type":"ford", "DOB":"1965-01-01"}
+
+### With name in json post body
+POST http://localhost:7071/api/{{implementation}}/
+
+{"name":"Joerg", "DOB":"1965-01-01"}
+
+
