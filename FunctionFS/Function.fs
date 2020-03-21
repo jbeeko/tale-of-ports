@@ -26,7 +26,9 @@ module FSNaivePort =
 
         let responseMessage = 
             if String.IsNullOrEmpty(name)
-            then "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+            then 
+                "This HTTP triggered function executed successfully. Pass a name in the query "+
+                "string or in the request body for a personalized response."
             else (sprintf "Hello, %s. This HTTP triggered function executed successfully." name)
         OkObjectResult(responseMessage)
 
@@ -49,7 +51,9 @@ module FSIdiomatic1 =
                 | _ -> match jObj.name with | null -> None | n -> Some n
 
         (match name with
-        | None -> "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+        | None -> 
+            "This HTTP triggered function executed successfully. Pass a name in the query "+
+            "string or in the request body for a personalized response."
         | Some n -> sprintf "Hello, %s. This HTTP triggered function executed successfully." n) 
         |> OkObjectResult
 
@@ -75,5 +79,7 @@ module FSIdiomatic2 =
 
         (match queryName, jsonName with
         | Some n, None | _, Some n -> sprintf "Hello, %s. This HTTP triggered function executed successfully." n
-        | _ -> "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.")
+        | _ -> 
+            "This HTTP triggered function executed successfully. Pass a name in the query "+
+            "string or in the request body for a personalized response.")
         |> OkObjectResult
