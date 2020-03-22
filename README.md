@@ -8,7 +8,7 @@ That got me thinking, what about taking a "out of the box" Visual Studio Code C#
 
 ## The C# Version
 
-To create the C# version I used the templates in a recent version Visual Studio 2019 with .net Core 3.x installed to create a new HTTP Triggered Azure Functions Project. See xxxx for the repository. Except for a few changes to the naming this is what I got:
+To create the C# version I used the templates in a recent version Visual Studio 2019 with .net Core 3.x installed to create a new HTTP Triggered Azure Functions Project. See xxxx for the repository. Except for a few changes to naming and formating this is what I got:
 
 ![C# code.](./images/c-code.png "")
 
