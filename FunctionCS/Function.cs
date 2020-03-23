@@ -7,11 +7,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
+
+
+// Function generated use "New Project" of type Azure
+// funnction with in Visual Studio
 namespace TaleOfPorts
 {
-    public static class CSDemo
+    public static class CSTemplate
     {
-        [FunctionName("CSDemo")]
+        [FunctionName("CSTemplate")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
