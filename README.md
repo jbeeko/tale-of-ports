@@ -18,7 +18,7 @@ Fairly straight forward, mostly boiler plate and `using` statements up to line 1
 
 ## The F# Version
 
-I then used the dotnet tooling to add a F# Azure Functions project to the solution. This is very straight forward, you install the dotnet CLI templates, create the project directory then initialize a new project with an appropriate template ([more here](https://www.aaron-powell.com/posts/). 
+I then used the dotnet tooling to add a F# Azure Functions project to the solution. This is very straight forward, you install the dotnet CLI templates, create the project directory then initialize a new project with an appropriate template ([more here](https://www.aaron-powell.com/posts/)). 
 ```
 $> dotnet new --install Microsoft.Azure.WebJobs.ProjectTemplates
 $> dotnet new func --language F# --name FunctionsInFSharp
@@ -30,7 +30,7 @@ Copying the C3 code and taking a few minutes to edit the C# function resulted in
 
 The first thing to notice is how similar it is to the C# version. It really is possible to take a snippet of C# and write it as F# without much effort. This is true not just here but across StackOverflow as well.  
 
-The next thing to notice is that like in the C# case much of the complexity is in checking for empty or null input. Something that feels foreign to F# developers. I [tried](https://github.com/jbeeko/tale-of-ports) to re-write this in a more idiomatic way but did not come up with anything was as brutally obvious. 
+The next thing to notice is that like in the C# case much of the complexity is in checking for empty or null input. Something that feels foreign to F# developers. I [tried](https://github.com/jbeeko/tale-of-ports/blob/da5869873d80b5e1d0a9f93a29f060fe921268b6/FunctionFS/Function.fs#L87) to re-write this in a more idiomatic way but did not come up with anything was as brutally obvious. 
 
 To enable idiomatic type safe F# functions will probably require a small (probably < 150 line) module wrapping `HttpRequest`, `HttpRespsonse`. Something for another day.  
 
