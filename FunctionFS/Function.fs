@@ -84,7 +84,6 @@ module FSNaive =
         } |> Async.StartAsTask
 
 
-// Not async {} because let! must be at the top level of the computation expression
 module FSIdiomatic1 =
     [<FunctionName("FSIdiomatic1")>]
     let run 

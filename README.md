@@ -30,7 +30,7 @@ Copying the C3 code and taking a few minutes to edit the C# function resulted in
 
 The first thing to notice is how similar it is to the C# version. It really is possible to take a snippet of C# and write it as F# without much effort. This is true not just here but across StackOverflow as well.  
 
-The next thing to notice is that like in the C# case much of the complexity is in checking for empty or null input. Something that feels foreign to F# developers. I (tried)[https://github.com/jbeeko/tale-of-ports] to re-write this in a more idiomatic way but did not come up with anything was as brutally obvious. 
+The next thing to notice is that like in the C# case much of the complexity is in checking for empty or null input. Something that feels foreign to F# developers. I [tried](https://github.com/jbeeko/tale-of-ports) to re-write this in a more idiomatic way but did not come up with anything was as brutally obvious. 
 
 To enable idiomatic type safe F# functions will probably require a small (probably < 150 line) module wrapping `HttpRequest`, `HttpRespsonse`. Something for another day.  
 
